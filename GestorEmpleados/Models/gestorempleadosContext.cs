@@ -43,7 +43,7 @@ namespace GestorEmpleados.Models
             {
                 entity.ToTable("desarrollador");
 
-                entity.HasIndex(e => e.Departamento)
+                entity.HasIndex(e => e.dpto)
                     .HasName("fk_dep_idx");
 
                 entity.HasIndex(e => e.Dni)
@@ -65,7 +65,7 @@ namespace GestorEmpleados.Models
                     .HasColumnName("apellido2")
                     .HasMaxLength(15);
 
-                entity.Property(e => e.Departamento).HasColumnName("departamento");
+                entity.Property(e => e.dpto).HasColumnName("departamento");
 
                 entity.Property(e => e.Direccion)
                     .IsRequired()
@@ -92,7 +92,7 @@ namespace GestorEmpleados.Models
 
                 entity.HasOne(d => d.DepartamentoNavigation)
                     .WithMany(p => p.Desarrollador)
-                    .HasForeignKey(d => d.Departamento)
+                    .HasForeignKey(d => d.dpto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_dep_desarrollador");
 
@@ -123,7 +123,7 @@ namespace GestorEmpleados.Models
             {
                 entity.ToTable("recursos_humanos");
 
-                entity.HasIndex(e => e.Departamento)
+                entity.HasIndex(e => e.dpto)
                     .HasName("fk_dep_rrhh_idx");
 
                 entity.HasIndex(e => e.Dni)
@@ -142,7 +142,7 @@ namespace GestorEmpleados.Models
                     .HasColumnName("apellido2")
                     .HasMaxLength(15);
 
-                entity.Property(e => e.Departamento).HasColumnName("departamento");
+                entity.Property(e => e.dpto).HasColumnName("departamento");
 
                 entity.Property(e => e.Direccion)
                     .IsRequired()
@@ -172,7 +172,7 @@ namespace GestorEmpleados.Models
 
                 entity.HasOne(d => d.DepartamentoNavigation)
                     .WithMany(p => p.RecursosHumanos)
-                    .HasForeignKey(d => d.Departamento)
+                    .HasForeignKey(d => d.dpto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_dep_rrhh");
             });
@@ -181,7 +181,7 @@ namespace GestorEmpleados.Models
             {
                 entity.ToTable("servicios_limpieza");
 
-                entity.HasIndex(e => e.Departamento)
+                entity.HasIndex(e => e.dpto)
                     .HasName("fk_dep_limpieza_idx");
 
                 entity.HasIndex(e => e.Dni)
@@ -205,7 +205,7 @@ namespace GestorEmpleados.Models
                     .HasColumnName("area_limpieza")
                     .HasMaxLength(500);
 
-                entity.Property(e => e.Departamento).HasColumnName("departamento");
+                entity.Property(e => e.dpto).HasColumnName("departamento");
 
                 entity.Property(e => e.Direccion)
                     .IsRequired()
@@ -230,7 +230,7 @@ namespace GestorEmpleados.Models
 
                 entity.HasOne(d => d.DepartamentoNavigation)
                     .WithMany(p => p.ServiciosLimpieza)
-                    .HasForeignKey(d => d.Departamento)
+                    .HasForeignKey(d => d.dpto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_dep_limpieza");
             });

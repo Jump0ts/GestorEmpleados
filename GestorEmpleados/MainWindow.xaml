@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestorEmpleados"
         mc:Ignorable="d"
-        Title="MainWindow" Height="575" Width="950" ResizeMode="NoResize">
+        Title="Gestor de empleados" Height="575" Width="950" ResizeMode="NoResize">
     <Grid>
         <Frame x:Name="frame" Source="Vistas/VMenuBuscar.xaml" NavigationUIVisibility="Hidden"/>
     </Grid>

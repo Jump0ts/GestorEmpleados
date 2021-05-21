@@ -13,9 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GestorEmpleados.Controladores;
 using GestorEmpleados.Models;
 
-namespace GestorEmpleados.Vista
+namespace GestorEmpleados.Vistas
 {
     /// <summary>
     /// Lógica de interacción para VMenuBuscar.xaml
@@ -26,40 +27,75 @@ namespace GestorEmpleados.Vista
         public VMenuBuscar()
         {
             InitializeComponent();
-            
-           
-            var db = new gestorempleadosContext();
-            ArrayList lista = new ArrayList();
-            foreach (Desarrollador dev in db.Desarrollador.ToList())
+
+            gridEmpleados.ItemsSource = ControladorVBuscar.control.getDesarrolladores();
+        }
+
+        
+
+        private void gridEmpleados_Loaded(object sender, RoutedEventArgs e)
+        {
+            gridEmpleados.Columns.RemoveAt(0);
+            gridEmpleados.Columns.RemoveAt(0);
+            gridEmpleados.Columns.RemoveAt(0);
+            gridEmpleados.Columns.RemoveAt(0);
+            gridEmpleados.Columns.RemoveAt(5);
+        }
+
+        private void actualizaLista(ArrayList lista)
+        {
+            if (gridEmpleados != null)
             {
-                lista.Add(dev); 
-                
+                gridEmpleados.ItemsSource = lista;
+
+                if (rdBDev.IsChecked == true) gridEmpleados.Columns.RemoveAt(0);
+                gridEmpleados.Columns.RemoveAt(0);
+                gridEmpleados.Columns.RemoveAt(0);
+                gridEmpleados.Columns.RemoveAt(0);
+                gridEmpleados.Columns.RemoveAt(5);
             }
+        }
 
-            gridEmpleados.ItemsSource = lista;
-            Console.WriteLine( gridEmpleados.Columns.Count());
-            lbl.Content = gridEmpleados.Columns.Count();
-            
-            
+        private void rdBDev_Checked(object sender, RoutedEventArgs e)
+        {
+            actualizaLista(ControladorVBuscar.control.getDesarrolladores());
+        }
 
+        private void rdBCleaner_Checked(object sender, RoutedEventArgs e)
+        {
+            actualizaLista(ControladorVBuscar.control.getCleaners());
+        }
+
+        private void rdBRH_Checked(object sender, RoutedEventArgs e)
+        {
+            actualizaLista(ControladorVBuscar.control.getRRHH());
         }
 
         private void btnAnadirEmpleado_Click(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("Vista/VAnadirEmpleado.xaml", UriKind.Relative);
+            Uri uri = new Uri("Vistas/VAnadirEmpleado.xaml", UriKind.Relative);
             NavigationService.Navigate(uri);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void gridEmpleados_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            lbl.Content = gridEmpleados.Columns.Count();
-        }
+            if (gridEmpleados.SelectedIndex != -1)
+            {
+                if (rdBDev.IsChecked == true) ControladorVEditar.control.desarrollador = (Desarrollador)gridEmpleados.SelectedItem;
+                else
+                {
+                    if (rdBRH.IsChecked == true) ControladorVEditar.control.recurso_humano = (RecursosHumanos)gridEmpleados.SelectedItem;
+                    else
+                    {
+                        ControladorVEditar.control.limpieza = (ServiciosLimpieza)gridEmpleados.SelectedItem;
+                    }
+                }
+                Uri uri = new Uri("Vistas/VEditarEmpleado.xaml", UriKind.Relative);
+                NavigationService.Navigate(uri);
+            }
+            
+            
 
-        private void gridEmpleados_Loaded(object sender, RoutedEventArgs e)
-        {
-            gridEmpleados.Columns.RemoveAt(1);
-            gridEmpleados.Columns.RemoveAt(1);
-            gridEmpleados.Columns.RemoveAt(1);
         }
     }
 }

@@ -14,11 +14,13 @@ namespace GestorEmpleados.Models
         public string Apellido2 { get; set; }
         public string Direccion { get; set; }
         public string Dni { get; set; }
-        public int Departamento { get; set; }
+        public int dpto { get; set; }
         public double HorasSemanales { get; set; }
         public double PrecioHora { get; set; }
         public double PrecioHorasExtras { get; set; }
 
         public Departamento DepartamentoNavigation { get; set; }
+
+        
     }
 }

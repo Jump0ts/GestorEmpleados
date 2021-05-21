@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestorEmpleados.Controladores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,19 +17,14 @@ using System.Windows.Shapes;
 namespace GestorEmpleados.Vistas
 {
     /// <summary>
-    /// Lógica de interacción para VAnadirEmpleado.xaml
+    /// Lógica de interacción para VEditarEmpleado.xaml
     /// </summary>
-    public partial class VAnadirEmpleado : Page
+    public partial class VEditarEmpleado : Page
     {
-        public VAnadirEmpleado()
+        public VEditarEmpleado()
         {
             InitializeComponent();
-        }
-
-        private void btnBuscarEmpleado_Click(object sender, RoutedEventArgs e)
-        {
-            Uri uri = new Uri("Vista/VBuscarEmpleado.xaml", UriKind.Relative);
-            NavigationService.Navigate(uri);
+            lbl.Content = ControladorVEditar.control.desarrollador.Nombre;
         }
     }
 }

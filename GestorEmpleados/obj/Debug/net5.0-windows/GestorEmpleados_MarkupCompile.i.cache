@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\App.xaml
-363108903
+4641251155
 
-141705130172
+18-1336579006
 212996240307
-MainWindow.xaml;Vistas\VAnadirEmpleado.xaml;Vistas\VMenuBuscar.xaml;
+MainWindow.xaml;Vistas\VAnadirEmpleado.xaml;Vistas\VEditarEmpleado.xaml;Vistas\VMenuBuscar.xaml;
 
-False
+True
 
