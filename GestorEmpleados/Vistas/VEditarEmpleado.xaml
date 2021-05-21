@@ -6,13 +6,63 @@
       xmlns:local="clr-namespace:GestorEmpleados.Vistas"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Editar empleado" Height="561" Width="950">
+      Title="Editar empleado" Height="575" Width="950">
 
     <Grid>
         <Grid HorizontalAlignment="Left" Height="46               " VerticalAlignment="Top" Width="950" Background="#FF000D95">
-            <Label x:Name="lbl" Content="Añadir empleado" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontFamily="Arial" FontSize="27"/>
+            <Label x:Name="lbl" Content="Editar empleado" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontFamily="Arial" FontSize="27"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="515" Margin="0,46,0,0" VerticalAlignment="Top" Width="950" Background="#FF1167FF"/>
-        
+        <Grid HorizontalAlignment="Left" Height="515" Margin="0,46,0,0" VerticalAlignment="Top" Width="950">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF709FD6" Offset="1"/>
+                    <GradientStop Color="#FF0E5BB8" Offset="0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="49,57,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
+            <TextBox x:Name="txtApe1" HorizontalAlignment="Left" Margin="49,134,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
+            <TextBox x:Name="txtDni" HorizontalAlignment="Left" Margin="358,134,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
+            <TextBox x:Name="txtDir" HorizontalAlignment="Left" Margin="358,53,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
+            <TextBox x:Name="txtApe2" HorizontalAlignment="Left" Margin="49,217,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
+            <Label Content="Horas semanales:" HorizontalAlignment="Left" Margin="623,27,0,0" VerticalAlignment="Top"/>
+            <Label Content="DNI:" HorizontalAlignment="Left" Margin="358,108,0,0" VerticalAlignment="Top"/>
+            <Label Content="Dirección completa:" HorizontalAlignment="Left" Margin="358,27,0,0" VerticalAlignment="Top"/>
+            <Label Content="Segundo apellido:" HorizontalAlignment="Left" Margin="49,191,0,0" VerticalAlignment="Top"/>
+            <Label Content="Primer apellido:" HorizontalAlignment="Left" Margin="49,108,0,0" VerticalAlignment="Top"/>
+            <Label Content="Nombre:" HorizontalAlignment="Left" Margin="49,27,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtHorasSemanales" HorizontalAlignment="Left" Margin="623,53,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextAlignment="Justify" MaxLines="1" MaxLength="3" PreviewTextInput="soloNumeros" DataObject.Pasting="controlPegar"/>
+            <TextBox x:Name="txtPrecioHoraExtra" HorizontalAlignment="Left" Margin="358,217,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextAlignment="Justify" MaxLines="1" MaxLength="3" PreviewTextInput="soloNumeros" DataObject.Pasting="controlPegar"/>
+            <TextBox x:Name="txtPrecioHora" HorizontalAlignment="Left" Margin="623,134,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextAlignment="Justify" MaxLines="1" MaxLength="3"  PreviewTextInput="soloNumeros" DataObject.Pasting="controlPegar"/>
+            <Label Content="Precio horas extras:" HorizontalAlignment="Left" Margin="358,191,0,0" VerticalAlignment="Top"/>
+            <Label Content="Precio hora:" HorizontalAlignment="Left" Margin="623,108,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btnAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="646,236,0,0" VerticalAlignment="Top" Height="22" Width="65" BorderBrush="#FF17FF00" Click="btnAceptar_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD3EAD7" Offset="0"/>
+                        <GradientStop Color="#FF0AE432" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="648,359,0,0" VerticalAlignment="Top" Height="22" Width="65" BorderBrush="#FFD41E1E" Foreground="White" Click="btnEliminar_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD6BCBC"/>
+                        <GradientStop Color="#FFE21010" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="647,299,0,0" VerticalAlignment="Top" Height="22" Width="65" Foreground="#FF020101" Click="btnCancelar_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD1E4E1"/>
+                        <GradientStop Color="#FF12ECCE" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <ComboBox x:Name="comboLenguaje" HorizontalAlignment="Left" Margin="49,293,0,0" VerticalAlignment="Top" Width="164"/>
+            <Label x:Name="lblVariable" Content="Label" HorizontalAlignment="Left" Margin="49,267,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtVariable" HorizontalAlignment="Left" Margin="49,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="505" Height="87"/>
+        </Grid>
+
     </Grid>
 </Page>

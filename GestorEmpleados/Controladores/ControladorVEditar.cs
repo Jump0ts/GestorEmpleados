@@ -4,24 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GestorEmpleados.Interfaces;
 
 namespace GestorEmpleados.Controladores
 {
-    class ControladorVEditar
+    class ControladorVEditar : IControladorVEditar
     {
         private static ControladorVEditar _control = null;
         private Desarrollador dev = null;
         private ServiciosLimpieza cleaner = null;
         private RecursosHumanos rh = null;
-        private gestorempleadosContext db = new gestorempleadosContext();
+        private gestorempleadosContext bd = new gestorempleadosContext();
 
         private ControladorVEditar() { }
         
-        public void editedDev(Desarrollador editado)
-        {
-            db.Entry(editado);
-            db.SaveChanges();
-        }
+       
 
         public static ControladorVEditar control
         {
@@ -34,6 +31,7 @@ namespace GestorEmpleados.Controladores
                 return _control;
             }
         }
+
         public Desarrollador desarrollador
         {
             get
@@ -47,6 +45,7 @@ namespace GestorEmpleados.Controladores
                 cleaner = null;
             }
         }
+
         public ServiciosLimpieza limpieza
         {
             get
@@ -60,6 +59,7 @@ namespace GestorEmpleados.Controladores
                 dev = null;
             }
         }
+
         public RecursosHumanos recurso_humano
         {
             get
@@ -73,14 +73,46 @@ namespace GestorEmpleados.Controladores
                 dev = null;
             }
         }
-        public List<Departamento> getDepartamentos()
+
+        public void desarrolladorEditado()
         {
-            return db.Departamento.ToList();   
+            bd.Entry(dev).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            bd.SaveChanges();
+        }
+
+        public void limpiezaEditado()
+        {
+            bd.Entry(cleaner).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            bd.SaveChanges();
+        }
+
+        public void recursosHumanosEditado()
+        {
+            bd.Entry(rh).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            bd.SaveChanges();
+        }
+
+        public void eliminarDesarrollador()
+        {
+            bd.Remove(dev).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            bd.SaveChanges();
+        }
+
+        public void eliminarRecursoHumano()
+        {
+            bd.Remove(rh).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            bd.SaveChanges();
+        }
+
+        public void eliminarServicioLimpieza()
+        {
+            bd.Remove(limpieza).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            bd.SaveChanges();
         }
 
         public List<Lenguaje> getLenguajes()
         {
-            return db.Lenguaje.ToList();
+            return bd.Lenguaje.ToList();
         }
     }
 }

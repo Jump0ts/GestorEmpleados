@@ -35,11 +35,10 @@ namespace GestorEmpleados.Vistas
 
         private void gridEmpleados_Loaded(object sender, RoutedEventArgs e)
         {
+            
             gridEmpleados.Columns.RemoveAt(0);
             gridEmpleados.Columns.RemoveAt(0);
             gridEmpleados.Columns.RemoveAt(0);
-            gridEmpleados.Columns.RemoveAt(0);
-            gridEmpleados.Columns.RemoveAt(5);
         }
 
         private void actualizaLista(ArrayList lista)
@@ -51,8 +50,6 @@ namespace GestorEmpleados.Vistas
                 if (rdBDev.IsChecked == true) gridEmpleados.Columns.RemoveAt(0);
                 gridEmpleados.Columns.RemoveAt(0);
                 gridEmpleados.Columns.RemoveAt(0);
-                gridEmpleados.Columns.RemoveAt(0);
-                gridEmpleados.Columns.RemoveAt(5);
             }
         }
 

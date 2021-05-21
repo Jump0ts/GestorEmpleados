@@ -26,12 +26,6 @@ namespace GestorEmpleados
             InitializeComponent();
         }
 
-        private void btn_Click(object sender, RoutedEventArgs e)
-        {
-            var db = new gestorempleadosContext();
-            var developers = db.Departamento.ToList();
-
-            
-        }
+        
     }
 }

@@ -15,6 +15,5 @@ namespace GestorEmpleados.Interfaces
 
         ArrayList getRRHH();
 
-        void editSelected();
     }
 }

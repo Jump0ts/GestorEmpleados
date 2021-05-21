@@ -57,11 +57,6 @@ namespace GestorEmpleados.Controladores
             return lista;
         }
 
-        public void editSelected()
-        {
-
-        }
-
         public static ControladorVBuscar control
         {
             get

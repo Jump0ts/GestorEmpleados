@@ -6,7 +6,7 @@ namespace GestorEmpleados.Models
 {
     public partial class gestorempleadosContext : DbContext
     {
-        public virtual DbSet<Departamento> Departamento { get; set; }
+       
         public virtual DbSet<Desarrollador> Desarrollador { get; set; }
         public virtual DbSet<Lenguaje> Lenguaje { get; set; }
         public virtual DbSet<RecursosHumanos> RecursosHumanos { get; set; }
@@ -23,28 +23,12 @@ namespace GestorEmpleados.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Departamento>(entity =>
-            {
-                entity.ToTable("departamento");
-
-                entity.HasIndex(e => e.Nombre)
-                    .HasName("nombre_UNIQUE")
-                    .IsUnique();
-
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.Nombre)
-                    .IsRequired()
-                    .HasColumnName("nombre")
-                    .HasMaxLength(45);
-            });
 
             modelBuilder.Entity<Desarrollador>(entity =>
             {
                 entity.ToTable("desarrollador");
 
-                entity.HasIndex(e => e.dpto)
-                    .HasName("fk_dep_idx");
+                
 
                 entity.HasIndex(e => e.Dni)
                     .HasName("dni_UNIQUE")
@@ -64,8 +48,6 @@ namespace GestorEmpleados.Models
                     .IsRequired()
                     .HasColumnName("apellido2")
                     .HasMaxLength(15);
-
-                entity.Property(e => e.dpto).HasColumnName("departamento");
 
                 entity.Property(e => e.Direccion)
                     .IsRequired()
@@ -90,11 +72,7 @@ namespace GestorEmpleados.Models
 
                 entity.Property(e => e.PrecioHorasExtras).HasColumnName("precio_horas_extras");
 
-                entity.HasOne(d => d.DepartamentoNavigation)
-                    .WithMany(p => p.Desarrollador)
-                    .HasForeignKey(d => d.dpto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_dep_desarrollador");
+                
 
                 entity.HasOne(d => d.LenguajeNavigation)
                     .WithMany(p => p.Desarrollador)
@@ -123,8 +101,7 @@ namespace GestorEmpleados.Models
             {
                 entity.ToTable("recursos_humanos");
 
-                entity.HasIndex(e => e.dpto)
-                    .HasName("fk_dep_rrhh_idx");
+                
 
                 entity.HasIndex(e => e.Dni)
                     .HasName("dni_UNIQUE")
@@ -142,7 +119,6 @@ namespace GestorEmpleados.Models
                     .HasColumnName("apellido2")
                     .HasMaxLength(15);
 
-                entity.Property(e => e.dpto).HasColumnName("departamento");
 
                 entity.Property(e => e.Direccion)
                     .IsRequired()
@@ -170,19 +146,12 @@ namespace GestorEmpleados.Models
 
                 entity.Property(e => e.PrecioHorasExtras).HasColumnName("precio_horas_extras");
 
-                entity.HasOne(d => d.DepartamentoNavigation)
-                    .WithMany(p => p.RecursosHumanos)
-                    .HasForeignKey(d => d.dpto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_dep_rrhh");
             });
 
             modelBuilder.Entity<ServiciosLimpieza>(entity =>
             {
                 entity.ToTable("servicios_limpieza");
 
-                entity.HasIndex(e => e.dpto)
-                    .HasName("fk_dep_limpieza_idx");
 
                 entity.HasIndex(e => e.Dni)
                     .HasName("dni_UNIQUE")
@@ -205,7 +174,6 @@ namespace GestorEmpleados.Models
                     .HasColumnName("area_limpieza")
                     .HasMaxLength(500);
 
-                entity.Property(e => e.dpto).HasColumnName("departamento");
 
                 entity.Property(e => e.Direccion)
                     .IsRequired()
@@ -228,11 +196,6 @@ namespace GestorEmpleados.Models
 
                 entity.Property(e => e.PrecioHorasExtras).HasColumnName("precio_horas_extras");
 
-                entity.HasOne(d => d.DepartamentoNavigation)
-                    .WithMany(p => p.ServiciosLimpieza)
-                    .HasForeignKey(d => d.dpto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_dep_limpieza");
             });
         }
     }
