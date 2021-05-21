@@ -1,0 +1,5 @@
+C:\Users\MsSti\source\repos\aa\GestorEmpleados\GestorEmpleados\obj\Debug\netcoreapp3.1\GestorEmpleados.csprojAssemblyReference.cache
+C:\Users\MsSti\source\repos\aa\GestorEmpleados\GestorEmpleados\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\MsSti\source\repos\aa\GestorEmpleados\GestorEmpleados\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\MsSti\source\repos\aa\GestorEmpleados\GestorEmpleados\obj\Debug\netcoreapp3.1\GestorEmpleados_MarkupCompile.cache
+C:\Users\MsSti\source\repos\aa\GestorEmpleados\GestorEmpleados\obj\Debug\netcoreapp3.1\GestorEmpleados_MarkupCompile.lref
