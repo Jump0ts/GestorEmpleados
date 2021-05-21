@@ -24,7 +24,7 @@
             <RadioButton x:Name="rdBRH" Content="Recursos humanos" HorizontalAlignment="Left" Margin="0,62,0,0" VerticalAlignment="Top" Height="20" Width="129" Foreground="White" Checked="rdBRH_Checked"/>
             <Button x:Name="btnAnadirEmpleado" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" Height="46"  Foreground="{x:Null}" Width="56" Background="{x:Null}" Click="btnAnadirEmpleado_Click">
                 <StackPanel>
-                    <TextBlock Text="Buscar" Foreground="#FFFFFCFC"></TextBlock>
+                    <TextBlock Text="Añadir" Foreground="#FFFFFCFC"></TextBlock>
                     <Image Source="GestorEmpleados;component/Recursos/imgAnadirEmpleado.png" Height="32"></Image>
                 </StackPanel>
             </Button>

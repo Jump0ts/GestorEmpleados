@@ -101,7 +101,7 @@ namespace GestorEmpleados.Vistas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GestorEmpleados;V1.0.0.0;component/vistas/vmenubuscar.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GestorEmpleados;component/vistas/vmenubuscar.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Vistas\VMenuBuscar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

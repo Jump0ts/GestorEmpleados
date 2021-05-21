@@ -35,10 +35,13 @@ namespace GestorEmpleados.Vistas
 
         private void gridEmpleados_Loaded(object sender, RoutedEventArgs e)
         {
-            
-            gridEmpleados.Columns.RemoveAt(0);
-            gridEmpleados.Columns.RemoveAt(0);
-            gridEmpleados.Columns.RemoveAt(0);
+
+            if (gridEmpleados.Columns.Count > 1)
+            {
+                gridEmpleados.Columns.RemoveAt(0);
+                gridEmpleados.Columns.RemoveAt(0);
+                gridEmpleados.Columns.RemoveAt(0);
+            }
         }
 
         private void actualizaLista(ArrayList lista)
@@ -47,9 +50,12 @@ namespace GestorEmpleados.Vistas
             {
                 gridEmpleados.ItemsSource = lista;
 
-                if (rdBDev.IsChecked == true) gridEmpleados.Columns.RemoveAt(0);
-                gridEmpleados.Columns.RemoveAt(0);
-                gridEmpleados.Columns.RemoveAt(0);
+                if (gridEmpleados.Items.Count > 1)
+                {
+                    if (rdBDev.IsChecked == true) gridEmpleados.Columns.RemoveAt(0);
+                    gridEmpleados.Columns.RemoveAt(0);
+                    gridEmpleados.Columns.RemoveAt(0);
+                }
             }
         }
 
