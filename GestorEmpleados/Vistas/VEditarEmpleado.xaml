@@ -19,11 +19,11 @@
                     <GradientStop Color="#FF0E5BB8" Offset="0"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="49,57,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
-            <TextBox x:Name="txtApe1" HorizontalAlignment="Left" Margin="49,134,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
-            <TextBox x:Name="txtDni" HorizontalAlignment="Left" Margin="358,134,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
-            <TextBox x:Name="txtDir" HorizontalAlignment="Left" Margin="358,53,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
-            <TextBox x:Name="txtApe2" HorizontalAlignment="Left" Margin="49,217,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="25"/>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="49,57,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="20"/>
+            <TextBox x:Name="txtApe1" HorizontalAlignment="Left" Margin="49,134,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="15"/>
+            <TextBox x:Name="txtDni" HorizontalAlignment="Left" Margin="358,134,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="10"/>
+            <TextBox x:Name="txtDir" HorizontalAlignment="Left" Margin="358,53,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="100"/>
+            <TextBox x:Name="txtApe2" HorizontalAlignment="Left" Margin="49,217,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextAlignment="Justify" MaxLines="1" MaxLength="15"/>
             <Label Content="Horas semanales:" HorizontalAlignment="Left" Margin="623,27,0,0" VerticalAlignment="Top"/>
             <Label Content="DNI:" HorizontalAlignment="Left" Margin="358,108,0,0" VerticalAlignment="Top"/>
             <Label Content="Dirección completa:" HorizontalAlignment="Left" Margin="358,27,0,0" VerticalAlignment="Top"/>
@@ -61,7 +61,7 @@
             </Button>
             <ComboBox x:Name="comboLenguaje" HorizontalAlignment="Left" Margin="49,293,0,0" VerticalAlignment="Top" Width="164"/>
             <Label x:Name="lblVariable" Content="Label" HorizontalAlignment="Left" Margin="49,267,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtVariable" HorizontalAlignment="Left" Margin="49,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="505" Height="87"/>
+            <TextBox x:Name="txtVariable" HorizontalAlignment="Left" Margin="49,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="505" Height="87" MaxLength="500"/>
         </Grid>
 
     </Grid>

@@ -15,10 +15,16 @@ namespace GestorEmpleados.Interfaces
 
         void recursosHumanosEditado();
 
-        public void eliminarDesarrollador();
+        void eliminarDesarrollador();
 
-        public void eliminarRecursoHumano();
+        void eliminarRecursoHumano();
 
-        public void eliminarServicioLimpieza();
+        void eliminarServicioLimpieza();
+
+        List<Lenguaje> getLenguajes();
+
+        int getIdLenguaje(String nombre);
+
+        String getNombreLenguaje(int id);
     }
 }

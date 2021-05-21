@@ -27,11 +27,12 @@ namespace GestorEmpleados.Vistas
         private String tipo = "";
         private ArrayList lenguajes = new ArrayList();
         private readonly Regex _regex = new Regex("[^0-9.-]+");
+
         public VEditarEmpleado()
         {
             InitializeComponent();
             getLenguajes();
-            rellenaCombo();
+            
             inicializarComponentes();
 
         }
@@ -40,6 +41,7 @@ namespace GestorEmpleados.Vistas
         {
             if (ControladorVEditar.control.desarrollador != null)
             {
+                rellenaCombo();
                 rellenaDev();
                 
 
@@ -63,21 +65,10 @@ namespace GestorEmpleados.Vistas
         {
             List<Lenguaje> lista = ControladorVEditar.control.getLenguajes();
 
-            foreach(Lenguaje dep in lista)
+            foreach (Lenguaje dep in lista)
             {
                 lenguajes.Add(dep);
             }
-        }
-
-
-        private String getNombreLenguaje(int id)
-        {
-            String nombre = "";
-            foreach(Lenguaje dep in lenguajes)
-            {
-                if (dep.Id == id) nombre = dep.Nombre;
-            }
-            return nombre;
         }
 
         private void rellenaCombo()
@@ -105,7 +96,7 @@ namespace GestorEmpleados.Vistas
             txtHorasSemanales.Text = ControladorVEditar.control.desarrollador.HorasSemanales + "";
             txtPrecioHoraExtra.Text = ControladorVEditar.control.desarrollador.PrecioHorasExtras + "";
             lblVariable.Content = "Lenguaje:";
-            comboLenguaje.SelectedItem = getNombreLenguaje(ControladorVEditar.control.desarrollador.Lenguaje);
+            comboLenguaje.SelectedItem = ControladorVEditar.control.getNombreLenguaje(ControladorVEditar.control.desarrollador.Lenguaje);
             txtVariable.Visibility = System.Windows.Visibility.Collapsed;
         }
 
@@ -160,16 +151,6 @@ namespace GestorEmpleados.Vistas
             return vacio;
         }
 
-        private int getIdLenguaje(String nombre)
-        {
-            int id = -5;
-            foreach (Lenguaje lenguaje in lenguajes)
-            {
-                if (lenguaje.Nombre == nombre) id = lenguaje.Id;
-            }
-            return id;
-        }
-
         private void sustituyeCambiosDesarrollador()
         {
             ControladorVEditar.control.desarrollador.Nombre = txtNombre.Text;
@@ -177,10 +158,10 @@ namespace GestorEmpleados.Vistas
             ControladorVEditar.control.desarrollador.Apellido2 = txtApe2.Text;
             ControladorVEditar.control.desarrollador.Direccion = txtDir.Text;
             ControladorVEditar.control.desarrollador.Dni = txtDni.Text;
-            ControladorVEditar.control.desarrollador.HorasSemanales = Int16.Parse(txtHorasSemanales.Text);
-            ControladorVEditar.control.desarrollador.PrecioHora = Int16.Parse(txtPrecioHora.Text);
-            ControladorVEditar.control.desarrollador.PrecioHorasExtras = Int16.Parse(txtPrecioHoraExtra.Text);
-            ControladorVEditar.control.desarrollador.Lenguaje = getIdLenguaje(comboLenguaje.SelectedItem.ToString());
+            ControladorVEditar.control.desarrollador.HorasSemanales = Double.Parse(txtHorasSemanales.Text);
+            ControladorVEditar.control.desarrollador.PrecioHora = Double.Parse(txtPrecioHora.Text);
+            ControladorVEditar.control.desarrollador.PrecioHorasExtras = Double.Parse(txtPrecioHoraExtra.Text);
+            ControladorVEditar.control.desarrollador.Lenguaje = ControladorVEditar.control.getIdLenguaje(comboLenguaje.SelectedItem.ToString());
 
             ControladorVEditar.control.desarrolladorEditado();
         }
@@ -192,9 +173,9 @@ namespace GestorEmpleados.Vistas
             ControladorVEditar.control.limpieza.Apellido2 = txtApe2.Text;
             ControladorVEditar.control.limpieza.Direccion = txtDir.Text;
             ControladorVEditar.control.limpieza.Dni = txtDni.Text;
-            ControladorVEditar.control.limpieza.HorasSemanales = Int16.Parse(txtHorasSemanales.Text);
-            ControladorVEditar.control.limpieza.PrecioHora = Int16.Parse(txtPrecioHora.Text);
-            ControladorVEditar.control.limpieza.PrecioHorasExtras = Int16.Parse(txtPrecioHoraExtra.Text);
+            ControladorVEditar.control.limpieza.HorasSemanales = Double.Parse(txtHorasSemanales.Text);
+            ControladorVEditar.control.limpieza.PrecioHora = Double.Parse(txtPrecioHora.Text);
+            ControladorVEditar.control.limpieza.PrecioHorasExtras = Double.Parse(txtPrecioHoraExtra.Text);
             ControladorVEditar.control.limpieza.AreaLimpieza = txtVariable.Text;
 
             ControladorVEditar.control.limpiezaEditado();
@@ -207,15 +188,13 @@ namespace GestorEmpleados.Vistas
             ControladorVEditar.control.recurso_humano.Apellido2 = txtApe2.Text;
             ControladorVEditar.control.recurso_humano.Direccion = txtDir.Text;
             ControladorVEditar.control.recurso_humano.Dni = txtDni.Text;
-            ControladorVEditar.control.recurso_humano.HorasSemanales = Int16.Parse(txtHorasSemanales.Text);
-            ControladorVEditar.control.recurso_humano.PrecioHora = Int16.Parse(txtPrecioHora.Text);
-            ControladorVEditar.control.recurso_humano.PrecioHorasExtras = Int16.Parse(txtPrecioHoraExtra.Text);
+            ControladorVEditar.control.recurso_humano.HorasSemanales = Double.Parse(txtHorasSemanales.Text);
+            ControladorVEditar.control.recurso_humano.PrecioHora = Double.Parse(txtPrecioHora.Text);
+            ControladorVEditar.control.recurso_humano.PrecioHorasExtras = Double.Parse(txtPrecioHoraExtra.Text);
             ControladorVEditar.control.recurso_humano.Funciones = txtVariable.Text;
             
             ControladorVEditar.control.recursosHumanosEditado();
         }
-
-        
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
         {

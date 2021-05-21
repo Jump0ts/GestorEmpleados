@@ -18,8 +18,6 @@ namespace GestorEmpleados.Controladores
 
         private ControladorVEditar() { }
         
-       
-
         public static ControladorVEditar control
         {
             get
@@ -113,6 +111,26 @@ namespace GestorEmpleados.Controladores
         public List<Lenguaje> getLenguajes()
         {
             return bd.Lenguaje.ToList();
+        }
+
+        public int getIdLenguaje(String nombre)
+        {
+            int id = -5;
+            foreach (Lenguaje lenguaje in bd.Lenguaje)
+            {
+                if (lenguaje.Nombre == nombre) id = lenguaje.Id;
+            }
+            return id;
+        }
+
+        public String getNombreLenguaje(int id)
+        {
+            String nombre = "";
+            foreach (Lenguaje dep in bd.Lenguaje)
+            {
+                if (dep.Id == id) nombre = dep.Nombre;
+            }
+            return nombre;
         }
     }
 }
