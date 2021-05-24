@@ -50,11 +50,12 @@ namespace GestorEmpleados.Vistas
             {
                 gridEmpleados.ItemsSource = lista;
 
-                if (gridEmpleados.Items.Count > 1)
+                if (gridEmpleados.Items.Count > 0)
                 {
                     if (rdBDev.IsChecked == true) gridEmpleados.Columns.RemoveAt(0);
                     gridEmpleados.Columns.RemoveAt(0);
                     gridEmpleados.Columns.RemoveAt(0);
+                    lbl.Content = "entra";
                 }
             }
         }
@@ -76,7 +77,7 @@ namespace GestorEmpleados.Vistas
 
         private void btnAnadirEmpleado_Click(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("Vistas/VAnadirEmpleado.xaml", UriKind.Relative);
+            Uri uri = new Uri("Vistas/VEditar_CrearEmpleado.xaml", UriKind.Relative);
             NavigationService.Navigate(uri);
         }
 
@@ -84,21 +85,24 @@ namespace GestorEmpleados.Vistas
         {
             if (gridEmpleados.SelectedIndex != -1)
             {
-                if (rdBDev.IsChecked == true) ControladorVEditar.control.desarrollador = (Desarrollador)gridEmpleados.SelectedItem;
+                if (rdBDev.IsChecked == true) ControladorVEditar_Crear.control.desarrollador = (Desarrollador)gridEmpleados.SelectedItem;
                 else
                 {
-                    if (rdBRH.IsChecked == true) ControladorVEditar.control.recurso_humano = (RecursosHumanos)gridEmpleados.SelectedItem;
+                    if (rdBRH.IsChecked == true) ControladorVEditar_Crear.control.recurso_humano = (RecursosHumanos)gridEmpleados.SelectedItem;
                     else
                     {
-                        ControladorVEditar.control.limpieza = (ServiciosLimpieza)gridEmpleados.SelectedItem;
+                        ControladorVEditar_Crear.control.limpieza = (ServiciosLimpieza)gridEmpleados.SelectedItem;
                     }
                 }
-                Uri uri = new Uri("Vistas/VEditarEmpleado.xaml", UriKind.Relative);
+                Uri uri = new Uri("Vistas/VEditar_CrearEmpleado.xaml", UriKind.Relative);
                 NavigationService.Navigate(uri);
             }
             
             
 
         }
+
+        
+
     }
 }

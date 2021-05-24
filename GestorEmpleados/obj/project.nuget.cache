@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sRgkK4lbRzLs70LVBo/D7xVfIkJWitnOul3rps41gjdPvpMXlT3pCC6DXLP9LwwVIGdxa/hXevKzEWU57AARAA==",
+  "dgSpecHash": "q40PDt3EOSvymfNuDZbIa3exJ0TR2e9+os/8Q2wC0ZGMjP2ATh2yqwGQgxbU9niovSqm7a7nJ0OFdL/PaYmJrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\MsSti\\OneDrive\\Documentos\\GitHub\\GestorEmpleados\\GestorEmpleados\\GestorEmpleados.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MsSti\\.nuget\\packages\\materialdesigncolors\\2.0.1\\materialdesigncolors.2.0.1.nupkg.sha512",
+    "C:\\Users\\MsSti\\.nuget\\packages\\materialdesignthemes\\4.1.0\\materialdesignthemes.4.1.0.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.csharp\\4.4.0\\microsoft.csharp.4.4.0.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.entityframeworkcore\\2.0.1\\microsoft.entityframeworkcore.2.0.1.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.entityframeworkcore.design\\2.0.1\\microsoft.entityframeworkcore.design.2.0.1.nupkg.sha512",
@@ -20,6 +22,7 @@
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.extensions.primitives\\2.0.0\\microsoft.extensions.primitives.2.0.0.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.toolkit\\7.0.2\\microsoft.toolkit.7.0.2.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\microsoft.win32.registry\\4.3.0\\microsoft.win32.registry.4.3.0.nupkg.sha512",
     "C:\\Users\\MsSti\\.nuget\\packages\\mysqlconnector\\0.32.0\\mysqlconnector.0.32.0.nupkg.sha512",

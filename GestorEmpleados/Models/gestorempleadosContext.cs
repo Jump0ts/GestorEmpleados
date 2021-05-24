@@ -68,6 +68,11 @@ namespace GestorEmpleados.Models
                     .HasColumnName("nombre")
                     .HasMaxLength(20);
 
+                entity.Property(e => e.Imagen)
+                    .IsRequired()
+                    .HasColumnName("imagen")
+                    .HasMaxLength(200);
+
                 entity.Property(e => e.PrecioHora).HasColumnName("precio_hora");
 
                 entity.Property(e => e.PrecioHorasExtras).HasColumnName("precio_horas_extras");
@@ -125,6 +130,11 @@ namespace GestorEmpleados.Models
                     .HasColumnName("direccion")
                     .HasMaxLength(100);
 
+                entity.Property(e => e.Imagen)
+                    .IsRequired()
+                    .HasColumnName("imagen")
+                    .HasMaxLength(200);
+
                 entity.Property(e => e.Dni)
                     .IsRequired()
                     .HasColumnName("dni")
@@ -179,6 +189,11 @@ namespace GestorEmpleados.Models
                     .IsRequired()
                     .HasColumnName("direccion")
                     .HasMaxLength(100);
+
+                entity.Property(e => e.Imagen)
+                    .IsRequired()
+                    .HasColumnName("imagen")
+                    .HasMaxLength(200);
 
                 entity.Property(e => e.Dni)
                     .IsRequired()

@@ -13,6 +13,7 @@ namespace GestorEmpleados.Models
         public string Apellido1 { get; set; }
         public string Apellido2 { get; set; }
         public string Direccion { get; set; }
+        public string Imagen { get; set; }
         public string Dni { get; set; }
         public double HorasSemanales { get; set; }
         public double PrecioHora { get; set; }

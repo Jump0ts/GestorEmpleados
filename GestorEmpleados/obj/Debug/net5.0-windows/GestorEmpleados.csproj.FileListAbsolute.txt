@@ -72,13 +72,11 @@ C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\bin\De
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\bin\Debug\net5.0-windows\System.Interactive.Async.dll
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\GestorEmpleados.csprojAssemblyReference.cache
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\MainWindow.g.cs
-C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VAnadirEmpleado.g.cs
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VMenuBuscar.g.cs
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\App.g.cs
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\GestorEmpleados_MarkupCompile.cache
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\GestorEmpleados_MarkupCompile.lref
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\MainWindow.baml
-C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VAnadirEmpleado.baml
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VMenuBuscar.baml
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\GestorEmpleados.g.resources
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\GestorEmpleados.GeneratedMSBuildEditorConfig.editorconfig
@@ -90,5 +88,9 @@ C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\De
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\ref\GestorEmpleados.dll
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\GestorEmpleados.pdb
 C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\GestorEmpleados.genruntimeconfig.cache
-C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VEditarEmpleado.g.cs
-C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VEditarEmpleado.baml
+C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\App.baml
+C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VEditar_CrearEmpleado.g.cs
+C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\obj\Debug\net5.0-windows\Vistas\VEditar_CrearEmpleado.baml
+C:\Users\MsSti\OneDrive\Documentos\GitHub\GestorEmpleados\GestorEmpleados\bin\Debug\net5.0-windows\Microsoft.Toolkit.dll

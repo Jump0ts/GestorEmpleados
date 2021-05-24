@@ -3,15 +3,17 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:GestorEmpleados.Vistas"
+      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:local="clr-namespace:GestorEmpleados.Vistas" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" d:DesignWidth="800"
       Title="VMenuBuscar" Height="575" Width="950">
 
     <Grid Background="White">
-        <Grid HorizontalAlignment="Left" Height="46               " VerticalAlignment="Top" Width="950" Background="#FF000D95" Margin="0,0,-1,0">
+        <materialDesign:Card HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="950" Background="#FF000D95" Margin="0,0,-1,0">
             <Label x:Name="lbl" Content="Buscar empleado" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontFamily="Arial" FontSize="27"/>
 
-        </Grid>
+        </materialDesign:Card>
         <Grid HorizontalAlignment="Left" Height="529" VerticalAlignment="Top" Width="139" Margin="0,46,0,0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -19,15 +21,14 @@
                     <GradientStop Color="#FF000D95"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <RadioButton x:Name="rdBDev" Content="Desarrolladores" HorizontalAlignment="Left" Margin="0,22,0,0" VerticalAlignment="Top" Height="20" Width="119" Foreground="White" Checked="rdBDev_Checked" IsChecked="True"/>
-            <RadioButton x:Name="rdBCleaner" Content="Servicio de limpieza" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Height="20" Width="129" Foreground="White" Checked="rdBCleaner_Checked"/>
-            <RadioButton x:Name="rdBRH" Content="Recursos humanos" HorizontalAlignment="Left" Margin="0,62,0,0" VerticalAlignment="Top" Height="20" Width="129" Foreground="White" Checked="rdBRH_Checked"/>
-            <Button x:Name="btnAnadirEmpleado" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" Height="46"  Foreground="{x:Null}" Width="56" Background="{x:Null}" Click="btnAnadirEmpleado_Click">
-                <StackPanel>
-                    <TextBlock Text="Añadir" Foreground="#FFFFFCFC"></TextBlock>
-                    <Image Source="GestorEmpleados;component/Recursos/imgAnadirEmpleado.png" Height="32"></Image>
-                </StackPanel>
-            </Button>
+            
+            <RadioButton x:Name="rdBDev" Content="Desarrolladores" HorizontalAlignment="Left" Margin="0,22,0,0" VerticalAlignment="Top" Height="20" Width="119" Foreground="White" Checked="rdBDev_Checked" IsChecked="True" Background="White"/>
+            <RadioButton x:Name="rdBCleaner" Content="Servicio de limpieza" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Height="20" Width="129" Foreground="White" Checked="rdBCleaner_Checked" Background="White"/>
+            <RadioButton x:Name="rdBRH" Content="Recursos humanos" HorizontalAlignment="Left" Margin="0,62,0,0" VerticalAlignment="Top" Height="20" Width="129" Foreground="White" Checked="rdBRH_Checked" Background="White"/>
+
+            <Button x:Name="btnAnadirEmpleado" Content="Añadir" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top" Height="28" Width="95" Background="#FF673AB7" Click="btnAnadirEmpleado_Click"/>
+
+
         </Grid>
         <DataGrid x:Name="gridEmpleados" Margin="139,46,0,0" CanUserSortColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" IsReadOnly="True" Loaded="gridEmpleados_Loaded" MouseDoubleClick="gridEmpleados_MouseDoubleClick">
 
