@@ -47,6 +47,7 @@ namespace GestorEmpleados.Vistas
             {
                 Uri fileUri = new Uri("https://picsum.photos/200/300?random=1");
                 imgPerfil.Source = new BitmapImage(fileUri);
+                comboLenguaje.SelectedIndex = 1;
             }
             
 
@@ -141,11 +142,12 @@ namespace GestorEmpleados.Vistas
             comboLenguaje.SelectedItem = ControladorVEditar_Crear.control.getNombreLenguaje(ControladorVEditar_Crear.control.desarrollador.Lenguaje);
             txtVariable.Visibility = System.Windows.Visibility.Collapsed;
             imgPerfil.Source = new BitmapImage(new Uri(ControladorVEditar_Crear.control.desarrollador.Imagen));
+            comboTipo.SelectedItem = "Desarrollador";
         }
 
         private void rellenaRecursoHumano()
         {
-            tipoEmpleado = "recurso humano";
+            tipoEmpleado = "Recursos Humanos";
 
             txtNombre.Text = ControladorVEditar_Crear.control.recurso_humano.Nombre;
             txtApe1.Text = ControladorVEditar_Crear.control.recurso_humano.Apellido1;
@@ -158,11 +160,12 @@ namespace GestorEmpleados.Vistas
             lblVariable.Content = "Funciones:";
             txtVariable.Text = ControladorVEditar_Crear.control.recurso_humano.Funciones;
             imgPerfil.Source = new BitmapImage(new Uri(ControladorVEditar_Crear.control.recurso_humano.Imagen));
+            comboTipo.SelectedItem = "Recursos Humanos";
         }
 
         private void rellenaCleaner()
         {
-            tipoEmpleado = "limpiador";
+            tipoEmpleado = "Servicio de limpieza";
 
             txtNombre.Text = ControladorVEditar_Crear.control.limpieza.Nombre;
             txtApe1.Text = ControladorVEditar_Crear.control.limpieza.Apellido1;
@@ -175,6 +178,7 @@ namespace GestorEmpleados.Vistas
             lblVariable.Content = "Area de limpieza:";
             txtVariable.Text = ControladorVEditar_Crear.control.limpieza.AreaLimpieza;
             imgPerfil.Source = new BitmapImage(new Uri(ControladorVEditar_Crear.control.limpieza.Imagen));
+            comboTipo.SelectedItem = "Servicio de limpieza";
         }
 
         private bool esTextoValido(String cadena)

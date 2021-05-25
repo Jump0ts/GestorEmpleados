@@ -41,6 +41,7 @@ namespace GestorEmpleados.Vistas
                 gridEmpleados.Columns.RemoveAt(0);
                 gridEmpleados.Columns.RemoveAt(0);
                 gridEmpleados.Columns.RemoveAt(0);
+                gridEmpleados.Columns.RemoveAt(4);
             }
         }
 
@@ -55,7 +56,7 @@ namespace GestorEmpleados.Vistas
                     if (rdBDev.IsChecked == true) gridEmpleados.Columns.RemoveAt(0);
                     gridEmpleados.Columns.RemoveAt(0);
                     gridEmpleados.Columns.RemoveAt(0);
-                    lbl.Content = "entra";
+                    gridEmpleados.Columns.RemoveAt(4);
                 }
             }
         }
